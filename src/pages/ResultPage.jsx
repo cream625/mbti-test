@@ -12,15 +12,14 @@ const ResultPage = () => {
   const resultDesc = resultMBTIData.desc.split("\n");
 
   useEffect(() => {
-    if(!Kakao.isInitialized()) {
+    if (!Kakao.isInitialized()) {
         Kakao.init("9388c4ddefb150bf965706b3ec85dc51")
     }
   },[]);
 
   const clickShareHandler = () => {
-    Kakao.Share.createCustomButton({
-        container: '#kakaotalk-sharing-btn',
-        templateId:977766,
+    Kakao.Share.sendCustom({
+        templateId:99193,
         templateArgs: {
           THU: 'https://mbti-test-one.vercel.app' + resultMBTIData.image,
           MATCH_CAT: resultMBTIData.match_cat,
