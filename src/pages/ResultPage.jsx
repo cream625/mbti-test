@@ -20,7 +20,7 @@ const ResultPage = () => {
   const clickShareHandler = () => {
     Kakao.Share.createCustomButton({
         container: '#kakaotalk-sharing-btn',
-        templateId:977766,
+        templateId:99193,
         templateArgs: {
           THU: 'https://mbti-test-one.vercel.app' + resultMBTIData.image,
           MATCH_CAT: resultMBTIData.match_cat,
