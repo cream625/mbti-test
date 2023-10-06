@@ -1,13 +1,14 @@
 import styles from "../../App.module.css";
 
-const MainTitle = () => {
+const QuestionTitle = (props) => {
   return (
     <div className={styles.main_title}>
-      <p className={styles.title_light}>MBTI로 알아보는</p>
-      <p className={styles.title_bold}>나와 어울리는 고양이 찾기</p>
-      <img className={styles.title_img} src="/cats.png" />
+      <p className={styles.title_light}>{`Q ${props.indexNum + 1}/12`}</p>
+      <p className={styles.title_bold}>
+        {props.questionData[props.indexNum].title}
+      </p>
     </div>
   );
 };
 
-export default MainTitle;
+export default QuestionTitle;
